@@ -1,0 +1,17 @@
+<%= render "shared/search_box" %>
+<div class="vr"></div>
+<div id="posts">
+  <% @posts.each do |post| %>
+    <%= render "posts/post_summary", post: post %>
+    <% if post != @posts.last %>
+      <div class="vr"></div>
+    <% end %>
+  <% end %>
+</div>
+
+<div class="mb-1">&nbsp;</div>
+
+<div class="d-flex justify-content-center">
+  <%== pagy_bootstrap_nav(@pagy) %>
+</div>
+
