@@ -21,7 +21,7 @@ gem 'rails-i18n'
 gem 'procore-sift'
 gem "active_admin_import" , github: "activeadmin-plugins/active_admin_import"
 
-
+gem "recaptcha"
 
 
 gem 'image_processing', '~> 1.2'

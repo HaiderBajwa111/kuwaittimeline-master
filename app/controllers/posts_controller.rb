@@ -59,7 +59,8 @@ class PostsController < ApplicationController
       @post.status = "pending"
     end
     respond_to do |format|
-      if @post.save
+      if verify_recaptcha(model: @post) && @post.save
+      #if @post.save
         format.html { redirect_to @post, notice: "Post was successfully created." }
         format.json { render :show, status: :created, location: @post }
       else

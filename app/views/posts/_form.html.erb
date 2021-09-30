@@ -59,6 +59,7 @@
     <label for="picture">Picture / صورة <span style="margin: 0 25px;color: #727272;">(optional/اختياري)</span></label><br>
         <%= form.file_field :picture, class:"form-control-file", id:"picture", accept: 'image/png,image/jpeg' %>
         <br>
+        <%= recaptcha_tags %>
       <%= form.submit "Add / أضف", class: "btn btn-primary" %>
     </div>    
 
