@@ -3,6 +3,8 @@ class Post < ApplicationRecord
   belongs_to :user, optional: true
   belongs_to :category, optional: true
   has_and_belongs_to_many :categories
+  has_rich_text :description_en
+  has_rich_text :description_ar
 
   accepts_nested_attributes_for :categories
   has_one_attached :picture

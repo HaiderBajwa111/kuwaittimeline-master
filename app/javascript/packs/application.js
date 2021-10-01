@@ -20,3 +20,5 @@ var jQuery = require('jquery')
 // in your web browser, when you type $('.div'), it is actually refering to global.$('.div')
 global.$ = global.jQuery = jQuery;
 window.$ = window.jQuery = jQuery;
+require("trix")
+require("@rails/actiontext")
